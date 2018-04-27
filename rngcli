@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+import sys, requests
+
+HOST = 'http://rngd.pythonanywhere.com'
+
+command = sys.argv[1]
+
+if command == 'new':
+	print(requests.post(HOST+'/new').text)
+	exit(0)
+if command == 'entropy':
+	token = input()
+	print('rngcli: entropy for token', token, 'is:')
+	print(requests.get(HOST+'/entropy/'+token).text)
+	exit(0)
+if command == 'next':
+	token = input()
+	print('rngcli: next random bytes for token', token)
+	print(requests.get(HOST+'/get/'+token).text)
+	exit(0)
