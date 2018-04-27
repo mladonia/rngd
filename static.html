@@ -1,0 +1,14 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="rngd">rngd</h1>
+<p><code>rngd</code> and <code>rngcli</code> are a pair of tools to provide secure random number generation. <code>rngd</code> can be easily modified to support any modern secure prng-alghorithm.</p>
+<h2 id="usage">usage</h2>
+<p>after installing <code>rngcli</code>, change the <code>HOST</code> variable to point to the application server. typical usage scenario:</p>
+<pre><code>./rngcli <span class="hljs-keyword">new</span> &gt; <span class="hljs-built_in">token</span>
+cat <span class="hljs-built_in">token</span> | ./rngcli next &gt; random_bytes
+</code></pre><p>use <code>cat token | ./rngcli entropy</code> to view inner state of the generator.</p>
+<blockquote>
+<p>created using <strong>flask</strong></p>
+</blockquote>
+</body></html>
