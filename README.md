@@ -3,7 +3,7 @@
 
 rngd is a web api-based client/server cryptosecure prng.
 
-##usage
+## usage
 
 ```bash
 ./rngcli new > token
